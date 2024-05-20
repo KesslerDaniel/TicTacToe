@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<BorderPane minHeight="300.0" minWidth="300.0" stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="me.lightning.tictactoe.GameViewController">
+
+    <top>
+        <Label fx:id="gameStatus" styleClass="gameStatus" BorderPane.alignment="CENTER" />
+    </top>
+
+    <center>
+        <StackPane BorderPane.alignment="CENTER">
+            <children>
+
+                <GridPane fx:id="gameGrid" gridLinesVisible="true" styleClass="gameGrid">
+
+                    <children>
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Button onAction="#onCellClick" styleClass="gameGrid-field"
+                            GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    </children>
+
+                </GridPane>
+
+                <Pane fx:id="winningLineContainer" styleClass="winningLineContainer" visible="false">
+                    <children>
+                        <Line fx:id="winningLine" styleClass="winningLine" strokeWidth="5.0" />
+                    </children>
+                </Pane>
+
+            </children>
+        </StackPane>
+
+    </center>
+
+    <bottom>
+        <Button fx:id="restartButton" onAction="#restartGame" styleClass="restart-button"
+            text="New Game" visible="false" BorderPane.alignment="CENTER" />
+    </bottom>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+</BorderPane>

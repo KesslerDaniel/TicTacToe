@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane minHeight="300.0" minWidth="300.0" stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="me.lightning.tictactoe.StartMenuController">
+
+   <top>
+      <Label styleClass="startMenu-title" text="Tic-Tac-Toe" BorderPane.alignment="CENTER" />
+   </top>
+
+   <center>
+      <Button onAction="#startNewGame" styleClass="startMenu-newGame" text="New Game"
+         BorderPane.alignment="CENTER" />
+   </center>
+
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+
+</BorderPane>
